@@ -449,7 +449,7 @@ def eliza_reply(user_input):
         return "Hi there! How are you feeling today?"
 
     elif "how are you" in msg:
-        return "I'm just a program, but I’m here to listen to you."
+        return "I'm fine, What was your favorite moment of the World Cup?"
 
     elif "sad" in msg:
         return "I'm sorry you're feeling sad. Want to talk about it?"
