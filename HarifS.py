@@ -467,11 +467,16 @@ def eliza_reply(user_input):
         return "Tell me more about that..."
 
 def answer_QA(user_input, qa_data, stats_data, df):
-    # ✅ Fast-path for greetings so we always reply
     low = user_input.strip().lower()
-    if any(g in low.split() for g in ("hi", "hello", "hey")):
-        return eliza_reply(user_input), None
 
+    # ✅ Small-talk fast path (hi/hello/how are you/thanks/bye etc.)
+    # Call eliza_reply first; if it returns something other than the generic fallback,
+    # respond immediately.
+    eliza_resp = eliza_reply(user_input)
+    if eliza_resp and eliza_resp != "Tell me more about that...":
+        return eliza_resp, None
+
+    # (Keep your original flow below)
     keywords = extract_keywords(user_input)
     if not keywords:
         return ("Please enter more specific keywords.", get_follow_up(['general']))
@@ -490,7 +495,7 @@ def answer_QA(user_input, qa_data, stats_data, df):
         answer = search_in_stats(keywords, stats_data)
     if not answer:
         answer = get_random_response(keywords)
-    if not answer:
+    if not answer and df is not None:
         answer = search_in_dataset(keywords, df)
         if answer:
             answer = "\n".join(f"{key}: {val}" for key, val in answer.items())
@@ -502,6 +507,7 @@ def answer_QA(user_input, qa_data, stats_data, df):
         follow_up = get_follow_up(keywords)
 
     return answer, follow_up
+
 
 
 # -----------------------------------------
