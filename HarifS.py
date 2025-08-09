@@ -3,10 +3,33 @@ import pandas as pd
 import re
 import random
 import time
+from pathlib import Path
 
+APP_DIR = Path(__file__).parent
+CSV_PATH = APP_DIR / "datasetFIFA.csv"          # put the CSV next to HarifS.py
+IMG_PATH = APP_DIR / "football-rb.png"          # put the image next to HarifS.py
 
-# تحميل البيانات
-df = pd.read_csv("/Users/dani/Desktop/eliza-project-gitengineers/datasetFIFA.csv", encoding="cp1252")
+@st.cache_data
+def load_csv(p: Path):
+    for enc in ("utf-8", "cp1252"):
+        try:
+            return pd.read_csv(p, encoding=enc)
+        except Exception:
+            pass
+    raise FileNotFoundError(f"Could not read: {p}")
+
+# Load CSV
+if CSV_PATH.exists():
+    df = load_csv(CSV_PATH)
+else:
+    st.error(f"❌ CSV not found at: {CSV_PATH}")
+    st.stop()
+
+# Sidebar image
+if IMG_PATH.exists():
+    st.sidebar.image(str(IMG_PATH), use_container_width=True)
+else:
+    st.sidebar.warning(f"⚠️ Image not found at: {IMG_PATH}")
 
 WC_2022_STATS = {
     "total matches": 64,
@@ -477,7 +500,6 @@ def answer_QA(user_input, qa_data, stats_data, df):
 
 st.set_page_config(page_title="World Cup Bot (حريف)", page_icon="⚽️", layout="wide")
 
-st.sidebar.image("/Users/dani/Desktop/eliza-project-gitengineers/football-rb.png", use_container_width=True)
 st.sidebar.title("About")
 st.sidebar.info(
     f"This humain-powered chatbot helps to know about all World Cup 2022. "
