@@ -476,7 +476,6 @@ def answer_QA(user_input, qa_data, stats_data, df):
     if eliza_resp and eliza_resp != "Tell me more about that...":
         return eliza_resp, None
 
-    # (Keep your original flow below)
     keywords = extract_keywords(user_input)
     if not keywords:
         return ("Please enter more specific keywords.", get_follow_up(['general']))
@@ -485,17 +484,14 @@ def answer_QA(user_input, qa_data, stats_data, df):
         return ("Sorry, I only understand English and can respond only in English.", None)
 
     if is_external_topic(keywords):
-        return ("That's an interesting topic! But I'm really an expert on the FIFA World Cup 2022. "
-                "What would you like to know about the tournament?", None)
+        return ("That's an interesting topic! But I'm really an expert on the FIFA World Cup 2022. What would you like to know about the tournament?", None)
 
     answer = search_in_qa(keywords, qa_data)
-    if not answer:
-        answer = eliza_reply(user_input)
     if not answer:
         answer = search_in_stats(keywords, stats_data)
     if not answer:
         answer = get_random_response(keywords)
-    if not answer and df is not None:
+    if not answer:
         answer = search_in_dataset(keywords, df)
         if answer:
             answer = "\n".join(f"{key}: {val}" for key, val in answer.items())
@@ -507,7 +503,6 @@ def answer_QA(user_input, qa_data, stats_data, df):
         follow_up = get_follow_up(keywords)
 
     return answer, follow_up
-
 
 
 # -----------------------------------------
