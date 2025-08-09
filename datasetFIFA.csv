@@ -1,0 +1,99 @@
+Match Number,Team,Player,Minute,Opponent,Date,Stadium,Group,Day,Time,Team_Role,Team_Score,Opponent_Score
+1,Ecuador,Enner Valencia,16,Qatar,Nov/20,"Al Bayt Stadium, Al Khor",A,Sun,19:00,Team 2,2,0
+2,Netherlands,Cody Gakpo,84,Senegal,Nov/21,"Al Thumama Stadium, Doha",A,Mon,19:00,Team 2,2,0
+18,Qatar,Mohammed Muntari,78,Senegal,Nov/25,"Al Thumama Stadium, Doha",A,Fri,16:00,Team 1,1,3
+18,Senegal,Boulaye Dia,41,Qatar,Nov/25,"Al Thumama Stadium, Doha",A,Fri,16:00,Team 2,3,1
+18,Senegal,Famara Diédhiou,48,Qatar,Nov/25,"Al Thumama Stadium, Doha",A,Fri,16:00,Team 2,3,1
+18,Senegal,Bamba Dieng,84,Qatar,Nov/25,"Al Thumama Stadium, Doha",A,Fri,16:00,Team 2,3,1
+19,Netherlands,Cody Gakpo,6,Ecuador,Nov/25,"Khalifa International Stadium, Al Rayyan",A,Fri,19:00,Team 1,1,1
+19,Ecuador,Enner Valencia,49,Netherlands,Nov/25,"Khalifa International Stadium, Al Rayyan",A,Fri,19:00,Team 2,1,1
+35,Ecuador,Moisés Caicedo,67,Senegal,Nov/29,"Khalifa International Stadium, Al Rayyan",A,Tue,18:00,Team 1,1,2
+35,Senegal,Ismaila Sarr,44,Ecuador,Nov/29,"Khalifa International Stadium, Al Rayyan",A,Tue,18:00,Team 2,2,1
+35,Senegal,Ismaila Sarr,44,Ecuador,Nov/29,"Khalifa International Stadium, Al Rayyan",A,Tue,18:00,Team 2,2,1
+35,Senegal,Koulibaly,70,Ecuador,Nov/29,"Khalifa International Stadium, Al Rayyan",A,Tue,18:00,Team 2,2,1
+36,Netherlands,Cody Gakpo,26,Qatar,Nov/29,"Al Bayt Stadium, Al Khor",A,Tue,18:00,Team 1,2,0
+36,Netherlands,Frenkie de Jong,49,Qatar,Nov/29,"Al Bayt Stadium, Al Khor",A,Tue,18:00,Team 1,2,0
+3,England,Jude Bellingham,35,Iran,Nov/21,"Khalifa International Stadium, Al Rayyan",B,Mon,16:00,Team 1,6,2
+3,England,Bukayo Saka,43,Iran,Nov/21,"Khalifa International Stadium, Al Rayyan",B,Mon,16:00,Team 1,6,2
+3,England,' Marcus Rashford,71,Iran,Nov/21,"Khalifa International Stadium, Al Rayyan",B,Mon,16:00,Team 1,6,2
+3,England,Jack Grealish,90,Iran,Nov/21,"Khalifa International Stadium, Al Rayyan",B,Mon,16:00,Team 1,6,2
+3,Iran,Mehdi Taremi,65,England,Nov/21,"Khalifa International Stadium, Al Rayyan",B,Mon,16:00,Team 2,2,6
+4,United States,Timothy Weah,36,Wales,Nov/21,"Ahmad bin Ali Stadium, Al Rayyan",,Mon,22:00,Team 1,1,1
+4,Wales,Gareth Bale,82,United States,Nov/21,"Ahmad bin Ali Stadium, Al Rayyan",B,Mon,22:00,Team 2,1,1
+33,England,Rashford,50,Wales,Nov/29,"Ahmad bin Ali Stadium, Al Rayyan",B,Tue,22:00,Team 2,3,0
+33,England,Foden,51,Wales,Nov/29,"Ahmad bin Ali Stadium, Al Rayyan",B,Tue,22:00,Team 2,3,0
+33,England,Rashford,68,Wales,Nov/29,"Ahmad bin Ali Stadium, Al Rayyan",B,Tue,22:00,Team 2,3,0
+34,United States,Pulisic,38,Iran,Nov/29,"Al Thumama Stadium, Doha",,Tue,22:00,Team 2,1,0
+8,Argentina,Lionel Messi,10,Saudi Arabia,Nov/22,"Lusail Iconic Stadium, Lusail",C,Tue,13:00,Team 1,1,2
+8,Argentina,Lionel Messi,10,Saudi Arabia,Nov/22,"Lusail Iconic Stadium, Lusail",C,Tue,13:00,Team 1,1,2
+8,Saudi Arabia,Saleh Al Shehri,48,Argentina,Nov/22,"Lusail Iconic Stadium, Lusail",,Tue,13:00,Team 2,2,1
+8,Saudi Arabia,Salem Al Dawsari,53,Argentina,Nov/22,"Lusail Iconic Stadium, Lusail",,Tue,13:00,Team 2,2,1
+22,Poland,Piotr Zielinski,39,Saudi Arabia,Nov/26,"Education City Stadium, Al Rayyan",C,Sat,16:00,Team 1,2,0
+22,Poland,Robert Lewandowski,82,Saudi Arabia,Nov/26,"Education City Stadium, Al Rayyan",C,Sat,16:00,Team 1,2,0
+24,Argentina,Lionel Messi,64,Mexico,Nov/26,"Lusail Iconic Stadium, Lusail",C,Sat,22:00,Team 1,2,0
+24,Argentina,Enzo Fernández,87,Mexico,Nov/26,"Lusail Iconic Stadium, Lusail",C,Sat,22:00,Team 1,2,0
+39,Argentina,Mac Allister,46,Poland,Nov/30,"Stadium 974, Doha",C,Wed,22:00,Team 2,2,0
+39,Argentina,Julián Álvarez,67,Poland,Nov/30,"Stadium 974, Doha",C,Wed,22:00,Team 2,2,0
+40,Mexico,Henry Martín,47,Saudi Arabia,Nov/30,"Lusail Iconic Stadium, Lusail",C,Wed,22:00,Team 2,2,1
+40,Mexico,Luis Chávez,52,Saudi Arabia,Nov/30,"Lusail Iconic Stadium, Lusail",C,Wed,22:00,Team 2,2,1
+5,France,Adrien Rabiot,27,Australia,Nov/22,"Al Janoub Stadium, Al Wakrah",D,Tue,22:00,Team 1,4,1
+5,France,Olivier Giroud,32,Australia,Nov/22,"Al Janoub Stadium, Al Wakrah",D,Tue,22:00,Team 1,4,1
+5,France,' Kylian Mbappé,68,Australia,Nov/22,"Al Janoub Stadium, Al Wakrah",D,Tue,22:00,Team 1,4,1
+5,Australia,Craig Goodwin,9,France,Nov/22,"Al Janoub Stadium, Al Wakrah",D,Tue,22:00,Team 2,1,4
+21,Australia,Mitchell Duke,23,Tunisia,Nov/26,"Al Janoub Stadium, Al Wakrah",D,Sat,13:00,Team 2,1,0
+23,France,Kylian Mbappé,61,Denmark,Nov/26,"Stadium 974, Doha",D,Sat,19:00,Team 1,2,1
+23,Denmark,Andreas Christensen,68,France,Nov/26,"Stadium 974, Doha",D,Sat,19:00,Team 2,1,2
+37,Australia,Mathew Leckie,60,Denmark,Nov/30,"Al Janoub Stadium, Al Wakrah",D,Wed,18:00,Team 1,1,0
+38,Tunisia,Wahbi Khazri,58,France,Nov/30,"Education City Stadium, Al Rayyan",D,Wed,18:00,Team 1,1,0
+11,Germany,Ilkay Gündogan,33,Japan,Nov/23,"Khalifa International Stadium, Al Rayyan",E,Wed,16:00,Team 1,1,2
+11,Germany,Ilkay Gündogan,33,Japan,Nov/23,"Khalifa International Stadium, Al Rayyan",E,Wed,16:00,Team 1,1,2
+11,Japan,Ritsu Doan,75,Germany,Nov/23,"Khalifa International Stadium, Al Rayyan",E,Wed,16:00,Team 2,2,1
+11,Japan,Takuma Asano,83,Germany,Nov/23,"Khalifa International Stadium, Al Rayyan",E,Wed,16:00,Team 2,2,1
+10,Spain,' Ferran Torres,31,Costa Rica,Nov/23,"Al Thumama Stadium, Doha",E,Wed,19:00,Team 1,7,0
+10,Spain,Dani Olmo,11,Costa Rica,Nov/23,"Al Thumama Stadium, Doha",E,Wed,19:00,Team 1,7,0
+10,Spain,Marco Asensio,21,Costa Rica,Nov/23,"Al Thumama Stadium, Doha",E,Wed,19:00,Team 1,7,0
+10,Spain,Ferran Torres,31,Costa Rica,Nov/23,"Al Thumama Stadium, Doha",E,Wed,19:00,Team 1,7,0
+10,Spain,' Gavi,74,Costa Rica,Nov/23,"Al Thumama Stadium, Doha",E,Wed,19:00,Team 1,7,0
+10,Spain,Carlos Soler,90,Costa Rica,Nov/23,"Al Thumama Stadium, Doha",E,Wed,19:00,Team 1,7,0
+25,Costa Rica,Keysher Fuller,81,Japan,Nov/27,"Ahmad bin Ali Stadium, Al Rayyan",,Sun,13:00,Team 2,1,0
+28,Spain,Álvaro Morata,62,Germany,Nov/27,"Al Bayt Stadium, Al Khor",E,Sun,22:00,Team 1,1,1
+28,Germany,Niclas Füllkrug,83,Spain,Nov/27,"Al Bayt Stadium, Al Khor",E,Sun,22:00,Team 2,1,1
+43,Japan,an,48,Spain,Dec/1,"Khalifa International Stadium, Al Rayyan",E,Thu,22:00,Team 1,2,1
+43,Japan,Ao Tanaka,51,Spain,Dec/1,"Khalifa International Stadium, Al Rayyan",E,Thu,22:00,Team 1,2,1
+43,Spain,Álvaro Morata,11,Japan,Dec/1,"Khalifa International Stadium, Al Rayyan",E,Thu,22:00,Team 2,1,2
+44,Costa Rica,Yeltsin Tejeda,58,Germany,Dec/1,"Al Bayt Stadium, Al Khor",,Thu,22:00,Team 1,2,4
+44,Costa Rica,Juan Vargas,70,Germany,Dec/1,"Al Bayt Stadium, Al Khor",,Thu,22:00,Team 1,2,4
+44,Germany,Serge Gnabry,10,Costa Rica,Dec/1,"Al Bayt Stadium, Al Khor",E,Thu,22:00,Team 2,4,2
+44,Germany,Kai Lukas Havertz,73,Costa Rica,Dec/1,"Al Bayt Stadium, Al Khor",E,Thu,22:00,Team 2,4,2
+44,Germany,'  Niclas Füllkrug,89,Costa Rica,Dec/1,"Al Bayt Stadium, Al Khor",E,Thu,22:00,Team 2,4,2
+9,Belgium,Michy Batshuayi,44,Canada,Nov/23,"Ahmad bin Ali Stadium, Al Rayyan",F,Wed,22:00,Team 1,1,0
+26,Morocco,Romain Saïss,73,Belgium,Nov/27,"Al Thumama Stadium, Doha",F,Sun,16:00,Team 2,2,0
+27,Croatia,'  Marko Livaja,44,Canada,Nov/27,"Khalifa International Stadium, Al Rayyan",F,Sun,19:00,Team 1,4,1
+27,Canada,Alphonso Davies,2,Croatia,Nov/27,"Khalifa International Stadium, Al Rayyan",F,Sun,19:00,Team 2,1,4
+42,Canada,Nayef Aguerd,40,Morocco,Dec/1,"Al Thumama Stadium, Doha",F,Thu,18:00,Team 1,1,2
+42,Morocco,Hakim Zyiech,4,Canada,Dec/1,"Al Thumama Stadium, Doha",F,Thu,18:00,Team 2,2,1
+42,Morocco,Youssef En-Nesyri,23,Canada,Dec/1,"Al Thumama Stadium, Doha",F,Thu,18:00,Team 2,2,1
+13,Switzerland,Breel Embolo,48,Cameroon,Nov/24,"Al Janoub Stadium, Al Wakrah",G,Thu,13:00,Team 1,1,0
+16,Brazil,Richarlison,62,Serbia,Nov/24,"Lusail Iconic Stadium, Lusail",G,Thu,22:00,Team 1,2,0
+29,Cameroon,Jean-Charles Castelletto,29,Serbia,Nov/28,"Al Janoub Stadium, Al Wakrah",G,Mon,13:00,Team 1,3,3
+29,Cameroon,Vincent Aboubakar,63,Serbia,Nov/28,"Al Janoub Stadium, Al Wakrah",G,Mon,13:00,Team 1,3,3
+29,Cameroon,Jean-Eric Choupo-Moting,66,Serbia,Nov/28,"Al Janoub Stadium, Al Wakrah",G,Mon,13:00,Team 1,3,3
+31,Brazil,Casemiro,83,Switzerland,Nov/28,"Stadium 974, Doha",G,Mon,19:00,Team 1,1,0
+47,Switzerland,Xherdan Shaqiri,20,Serbia,Dec/2,"Stadium 974, Doha",G,Fri,22:00,Team 2,3,2
+47,Switzerland,Breel Embolo,44,Serbia,Dec/2,"Stadium 974, Doha",G,Fri,22:00,Team 2,3,2
+47,Switzerland,Freuler,48,Serbia,Dec/2,"Stadium 974, Doha",G,Fri,22:00,Team 2,3,2
+15,Portugal,Cristiano Ronaldo,65,Ghana,Nov/24,"Stadium 974, Doha",H,Thu,19:00,Team 1,3,2
+15,Portugal,Cristiano Ronaldo,65,Ghana,Nov/24,"Stadium 974, Doha",H,Thu,19:00,Team 1,3,2
+15,Portugal,João Félix,78,Ghana,Nov/24,"Stadium 974, Doha",H,Thu,19:00,Team 1,3,2
+15,Portugal,Rafael Leão,80,Ghana,Nov/24,"Stadium 974, Doha",H,Thu,19:00,Team 1,3,2
+15,Ghana,André Ayew,73,Portugal,Nov/24,"Stadium 974, Doha",H,Thu,19:00,Team 2,2,3
+15,Ghana,Osman Bukari,89,Portugal,Nov/24,"Stadium 974, Doha",H,Thu,19:00,Team 2,2,3
+30,South Korea,Cho Gue-sung,58,Ghana,Nov/28,"Education City Stadium, Al Rayyan",,Mon,16:00,Team 1,2,3
+30,Ghana,Mohammed Salisu,24,South Korea,Nov/28,"Education City Stadium, Al Rayyan",H,Mon,16:00,Team 2,3,2
+30,Ghana,Mohammed Kudus,34,South Korea,Nov/28,"Education City Stadium, Al Rayyan",H,Mon,16:00,Team 2,3,2
+32,Portugal,Bruno Fernandes,54,Uruguay,Nov/28,"Lusail Iconic Stadium, Lusail",H,Mon,22:00,Team 1,2,0
+46,South Korea,Kim Young-gwon,27,Portugal,Dec/2,"Lusail Iconic Stadium, Lusail",,Fri,18:00,Team 1,2,1
+46,Portugal,Ricardo Horta,5,South Korea,Dec/2,"Lusail Iconic Stadium, Lusail",H,Fri,18:00,Team 2,1,2
+55,Spain,Enner Valencia,16,Morocco,Dec/6,"Education City Stadium, Al Rayyan",E,Tue,18:00,Team 2,0,3
+61,Argentina,Timothy Weah,36,Croatia,Dec/13,"Lusail Iconic Stadium, Lusail",C,Tue,22:00,Team 1,3,0
+61,Croatia,Gareth Bale,82,Argentina,Dec/13,"Lusail Iconic Stadium, Lusail",F,Tue,22:00,Team 2,0,3
