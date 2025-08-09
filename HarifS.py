@@ -468,25 +468,55 @@ def eliza_reply(user_input):
 
 def answer_QA(user_input, qa_data, stats_data, df):
     keywords = extract_keywords(user_input)
+
+    # If no useful keywords
     if not keywords:
         return ("Please enter more specific keywords.", get_follow_up(['general']))
 
+    # Check language
     if not is_english(user_input):
         return ("Sorry, I only understand English and can respond only in English.", None)
 
+    # Check if it's an unrelated topic
     if is_external_topic(keywords):
-        return ("That's an interesting topic! But I'm really an expert on the FIFA World Cup 2022. What would you like to know about the tournament?", None)
+        return ("That's an interesting topic! But I'm really an expert on the FIFA World Cup 2022. "
+                "What would you like to know about the tournament?", None)
 
+    # --- Step 1: Try QA dictionary ---
     answer = search_in_qa(keywords, qa_data)
+
+    # --- Step 2: Try Stats dictionary ---
     if not answer:
         answer = search_in_stats(keywords, stats_data)
+
+    # --- Step 3: Try predefined responses ---
     if not answer:
         answer = get_random_response(keywords)
+
+    # --- Step 4: Try dataset search ---
     if not answer:
         answer = search_in_dataset(keywords, df)
         if answer:
+            # Make dataset output more readable
             answer = "\n".join(f"{key}: {val}" for key, val in answer.items())
 
+    # --- Step 5: If still nothing, try partial keyword match (more flexible) ---
+    if not answer:
+        for key, val in qa_data.items():
+            if any(kw in key.lower() for kw in keywords):
+                answer = val
+                break
+        if not answer:
+            for key, val in stats_data.items():
+                if any(kw in str(key).lower() for kw in keywords):
+                    if isinstance(val, dict):
+                        sub_ans = [f"{sk}: {sv}" for sk, sv in val.items()]
+                        answer = "\n".join(sub_ans)
+                    else:
+                        answer = f"{key}: {val}"
+                    break
+
+    # --- Step 6: If still nothing, fallback to ELIZA reply ---
     if not answer:
         answer = eliza_reply(user_input)
         follow_up = None
