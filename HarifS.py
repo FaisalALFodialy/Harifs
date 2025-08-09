@@ -467,14 +467,6 @@ def eliza_reply(user_input):
         return "Tell me more about that..."
 
 def answer_QA(user_input, qa_data, stats_data, df):
-    GENERIC_FALLBACK = "Tell me more about that..."
-
-    # 1) Try ELIZA first
-    eliza_resp = eliza_reply(user_input)
-    if eliza_resp and eliza_resp != GENERIC_FALLBACK:
-        return eliza_resp, None
-
-    # 2) Otherwise, proceed with your sources
     keywords = extract_keywords(user_input)
     if not keywords:
         return ("Please enter more specific keywords.", get_follow_up(['general']))
@@ -483,8 +475,7 @@ def answer_QA(user_input, qa_data, stats_data, df):
         return ("Sorry, I only understand English and can respond only in English.", None)
 
     if is_external_topic(keywords):
-        return ("That's an interesting topic! But I'm really an expert on the FIFA World Cup 2022. "
-                "What would you like to know about the tournament?", None)
+        return ("That's an interesting topic! But I'm really an expert on the FIFA World Cup 2022. What would you like to know about the tournament?", None)
 
     answer = search_in_qa(keywords, qa_data)
     if not answer:
@@ -496,7 +487,6 @@ def answer_QA(user_input, qa_data, stats_data, df):
         if answer:
             answer = "\n".join(f"{key}: {val}" for key, val in answer.items())
 
-    # 3) Final fallback: ELIZA generic (or whatever it returns)
     if not answer:
         answer = eliza_reply(user_input)
         follow_up = None
@@ -504,9 +494,7 @@ def answer_QA(user_input, qa_data, stats_data, df):
         follow_up = get_follow_up(keywords)
 
     return answer, follow_up
-
-
-
+    
 # -----------------------------------------
 # واجهة Streamlit مع المحادثة (معادلة للكود الثاني لكن مع دعم QA)
 
