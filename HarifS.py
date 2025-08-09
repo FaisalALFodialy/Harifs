@@ -467,6 +467,14 @@ def eliza_reply(user_input):
         return "Tell me more about that..."
 
 def answer_QA(user_input, qa_data, stats_data, df):
+    # ✅ 1) Greeting fast-path → ELIZA first
+    low = user_input.strip().lower()
+    greeting_words = {"hi", "hello", "hey","thanks", "thank you", "bye", "goodbye","how are you"}
+    # match whole words or phrases
+    if any(g in low.split() for g in {"hi", "hello", "hey", "yo"}) or any(p in low for p in greeting_words):
+        return eliza_reply(user_input), None
+
+    # ✅ 2) Your original flow
     keywords = extract_keywords(user_input)
     if not keywords:
         return ("Please enter more specific keywords.", get_follow_up(['general']))
@@ -475,7 +483,8 @@ def answer_QA(user_input, qa_data, stats_data, df):
         return ("Sorry, I only understand English and can respond only in English.", None)
 
     if is_external_topic(keywords):
-        return ("That's an interesting topic! But I'm really an expert on the FIFA World Cup 2022. What would you like to know about the tournament?", None)
+        return ("That's an interesting topic! But I'm really an expert on the FIFA World Cup 2022. "
+                "What would you like to know about the tournament?", None)
 
     answer = search_in_qa(keywords, qa_data)
     if not answer:
@@ -494,6 +503,7 @@ def answer_QA(user_input, qa_data, stats_data, df):
         follow_up = get_follow_up(keywords)
 
     return answer, follow_up
+
     
 # -----------------------------------------
 # واجهة Streamlit مع المحادثة (معادلة للكود الثاني لكن مع دعم QA)
