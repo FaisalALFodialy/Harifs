@@ -552,7 +552,7 @@ if user_input := st.chat_input("Type your message..."):
         st.markdown(user_input)
 
     with st.spinner("Thinking... ⚽"):
-        time.sleep(1)
+        time.sleep(2)
         answer, follow_up = answer_QA(user_input, WC_2022_QA, WC_2022_STATS, df)
 
     st.session_state.messages.append({"role": "assistant", "content": answer})
