@@ -485,6 +485,8 @@ def answer_QA(user_input, qa_data, stats_data, df):
 
     answer = search_in_qa(keywords, qa_data)
     if not answer:
+        answer = eliza_reply(user_input)
+    if not answer:
         answer = search_in_stats(keywords, stats_data)
     if not answer:
         answer = get_random_response(keywords)
