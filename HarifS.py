@@ -412,16 +412,12 @@ def search_in_dataset(keywords, df):
             return df.iloc[i].to_dict()
     return None
 
-def is_english(text):
-    try:
-        text.encode(encoding='utf-8').decode('ascii')
-    except UnicodeDecodeError:
+def is_english(text: str) -> bool:
+    # If it contains Arabic script, treat as non-English
+    if re.search(r'[\u0600-\u06FF]', text):
         return False
-    else:
-        words = re.findall(r'\b\w+\b', text.lower())
-        english_words = {"the", "and", "is", "in", "you", "what", "who", "when", "where", "how"}
-        count_english = sum(1 for w in words if w in english_words)
-        return count_english > 0
+    # Otherwise, consider it English if it has any Latin letters
+    return bool(re.search(r'[A-Za-z]', text))
 
 def is_external_topic(keywords):
     external_keywords = {"basketball", "tennis", "politics", "music", "movie", "weather", "news", "technology", "stock", "economy"}
