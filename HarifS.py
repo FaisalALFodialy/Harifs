@@ -446,7 +446,10 @@ def eliza_reply(user_input):
 
     elif "how are you" in msg:
         return "I'm fine, What was your favorite moment of the World Cup?"
-
+        
+    elif "fine":
+        return "I'm fine too, What was your favorite moment of the World Cup?"
+        
     elif "sad" in msg:
         return "I'm sorry you're feeling sad. Want to talk about it?"
 
@@ -465,7 +468,7 @@ def eliza_reply(user_input):
 def answer_QA(user_input, qa_data, stats_data, df):
     # ✅ 1) Greeting fast-path → ELIZA first
     low = user_input.strip().lower()
-    greeting_words = {"hi", "hello", "hey","thanks", "thank you", "bye", "goodbye","how are you","Mission"}
+    greeting_words = {"hi", "hello", "hey","thanks", "thank you", "bye", "goodbye","how are you","Mission","fine"}
     # match whole words or phrases
     if any(g in low.split() for g in {"hi", "hello", "hey", "yo"}) or any(p in low for p in greeting_words):
         return eliza_reply(user_input), None
