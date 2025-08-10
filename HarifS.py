@@ -507,7 +507,20 @@ def answer_QA(user_input, qa_data, stats_data, df):
 
     return answer, follow_up
 
-    
+def render_team():
+    st.title("👥 Our Team — فريقنا")
+    st.caption("We build Harif (حريف) with ❤️")
+    cols_per_row = 2
+    for i in range(0, len(TEAM), cols_per_row):
+        cols = st.columns(cols_per_row)
+        for col, member in zip(cols, TEAM[i:i+cols_per_row]):
+            with col:
+                st.container(border=True)
+                if member["photo"]:
+                    st.image(member["photo"], use_container_width=True)
+                st.subheader(member["name"])
+                st.write(member["role"])
+                
 # -----------------------------------------
 # واجهة Streamlit مع المحادثة (معادلة للكود الثاني لكن مع دعم QA)
 
@@ -518,7 +531,14 @@ st.sidebar.info(
     f"This humain-powered chatbot helps to know about all World Cup 2022. "
     f"Simply chat with it and provide details about the World Cup 2022 — teams, winners, players or history!. "
 )
-
+menu = st.sidebar.radio("Navigate", ["Chat", "Team"])  # NEW
+# --- define your team data near the top (e.g., after constants) ---
+TEAM = [
+    {"name": "Faisal Alfodaily", "role": "AI / Chatbot Engineer"},  # e.g. "images/faisal.png"
+    {"name": "Danuah",             "role": "Backend Developer"},
+    {"name": "Rwaa",         "role": "Data Analyst"},
+    {"name": "Mohammed",             "role": "Product Designer"},
+]
 st.markdown("""
 <style>
 html, body, [data-testid="stAppViewContainer"] {
@@ -546,7 +566,9 @@ st.markdown("""
 # Welcome to World Cup Bot (حريف) ⚽️  
 Discover World Cup history in 2022!
 """)
-
+if menu == "Team":
+    render_team()  # <-- show the team page
+else:
 if "messages" not in st.session_state:
     st.session_state.messages = [
         {"role": "assistant", "content": "Hello! ⚽️ Ask me anything about the World Cup — teams, winners, players or history!"}
