@@ -532,13 +532,6 @@ st.sidebar.info(
     f"Simply chat with it and provide details about the World Cup 2022 — teams, winners, players or history!. "
 )
 menu = st.sidebar.radio("Navigate", ["Chat", "Team"])  # NEW
-# --- define your team data near the top (e.g., after constants) ---
-TEAM = [
-    {"name": "Faisal Alfodaily", "role": "AI / Chatbot Engineer"},  # e.g. "images/faisal.png"
-    {"name": "Danuah",             "role": "Backend Developer"},
-    {"name": "Rwaa",         "role": "Data Analyst"},
-    {"name": "Mohammed",             "role": "Product Designer"},
-]
 st.markdown("""
 <style>
 html, body, [data-testid="stAppViewContainer"] {
@@ -570,15 +563,10 @@ if menu == "Team":
     st.sidebar.title("Our Team")
     st.sidebar.markdown("""
     **Developers:**
-    - Faisal Alfodialy
+    - Faisal 
     - Daniah
     - ruwaa
-    -Mohammed
-    **Designer:**
-    - Sara Mohammed
-    
-    **Project Manager:**
-    - Khalid Abdullah
+    - Mohammed
     """)
 else:
     if "messages" not in st.session_state:
