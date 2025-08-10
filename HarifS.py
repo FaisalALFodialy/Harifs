@@ -560,8 +560,8 @@ st.markdown("""
 Discover World Cup history in 2022!
 """)
 if menu == "Team":
-    st.sidebar.title("Our Team")
-    st.sidebar.markdown("""
+    st.title("Our Team")
+    st.markdown("""
     **Developers:**
     - Faisal 
     - Daniah
