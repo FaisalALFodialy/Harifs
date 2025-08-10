@@ -569,32 +569,32 @@ Discover World Cup history in 2022!
 if menu == "Team":
     render_team()  # <-- show the team page
 else:
-if "messages" not in st.session_state:
-    st.session_state.messages = [
-        {"role": "assistant", "content": "Hello! ⚽️ Ask me anything about the World Cup — teams, winners, players or history!"}
-    ]
-
-# عرض المحادثة السابقة
-for msg in st.session_state.messages:
-    with st.chat_message(msg["role"]):
-        st.markdown(msg["content"])
-
-# إدخال المستخدم وجلب الرد
-if user_input := st.chat_input("Type your message..."):
-
-    st.session_state.messages.append({"role": "user", "content": user_input})
-    with st.chat_message("user"):
-        st.markdown(user_input)
-
-    with st.spinner("Thinking... ⚽"):
-        time.sleep(2)
-        answer, follow_up = answer_QA(user_input, WC_2022_QA, WC_2022_STATS, df)
-
-    st.session_state.messages.append({"role": "assistant", "content": answer})
-    with st.chat_message("assistant"):
-        st.markdown(answer)
-
-    if follow_up:
-        st.session_state.messages.append({"role": "assistant", "content": follow_up})
+    if "messages" not in st.session_state:
+        st.session_state.messages = [
+            {"role": "assistant", "content": "Hello! ⚽️ Ask me anything about the World Cup — teams, winners, players or history!"}
+        ]
+    
+    # عرض المحادثة السابقة
+    for msg in st.session_state.messages:
+        with st.chat_message(msg["role"]):
+            st.markdown(msg["content"])
+    
+    # إدخال المستخدم وجلب الرد
+    if user_input := st.chat_input("Type your message..."):
+    
+        st.session_state.messages.append({"role": "user", "content": user_input})
+        with st.chat_message("user"):
+            st.markdown(user_input)
+    
+        with st.spinner("Thinking... ⚽"):
+            time.sleep(2)
+            answer, follow_up = answer_QA(user_input, WC_2022_QA, WC_2022_STATS, df)
+    
+        st.session_state.messages.append({"role": "assistant", "content": answer})
         with st.chat_message("assistant"):
-            st.markdown(follow_up)
+            st.markdown(answer)
+    
+        if follow_up:
+            st.session_state.messages.append({"role": "assistant", "content": follow_up})
+            with st.chat_message("assistant"):
+                st.markdown(follow_up)
