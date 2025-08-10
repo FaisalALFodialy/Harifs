@@ -567,7 +567,19 @@ st.markdown("""
 Discover World Cup history in 2022!
 """)
 if menu == "Team":
-    render_team()  # <-- show the team page
+    st.sidebar.title("Our Team")
+    st.sidebar.markdown("""
+    **Developers:**
+    - Faisal Alfodialy
+    - Daniah
+    - ruwaa
+    -Mohammed
+    **Designer:**
+    - Sara Mohammed
+    
+    **Project Manager:**
+    - Khalid Abdullah
+    """)
 else:
     if "messages" not in st.session_state:
         st.session_state.messages = [
